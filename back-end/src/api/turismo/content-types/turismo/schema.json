@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "turismos",
+  "info": {
+    "singularName": "turismo",
+    "pluralName": "turismos",
+    "displayName": "Turismo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "horario_de_apertura": {
+      "type": "string"
+    },
+    "horario_de_cierre": {
+      "type": "string"
+    },
+    "Ubicacion": {
+      "type": "string"
+    },
+    "costo": {
+      "type": "decimal"
+    },
+    "evento_importante": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ciudad.ciudad"
+    },
+    "foto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::foto.foto"
+    }
+  }
+}
