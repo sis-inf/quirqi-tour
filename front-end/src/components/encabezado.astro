@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Quirqui-Tour">
+	<header class="navegacion">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<div class="contenedor-logo">
+			<section class="logo seccion">
+				<div>
+					<img src="/LogoTOUR.svg" alt="">
+				</div>
+				<div class="logo-principal">
+					<a href="/"><img src="/logo.png" alt=""></a>
+				</div>
+				<div>
+					<img src="/LogoTOUR.svg" alt="" style="transform: scaleX(-1);">
+				</div>
+			</section>
+			<section class="navegacion-contenedor seccion">
+				<nav class="navbar" id="navbar">
+					<input type="checkbox" id="checkbox">
+					<div class="menu">
+						<label for="checkbox"></label>
+						<img src="close.svg" class="x-icon" alt="">
+						<img src="menu.svg" class="line-icon" alt="">
+					</div>
+					<!-- Enlaces de navegación -->
+					<ul class="nav-links" id="nav-links">
+						<li><a href="/">INICIO</a></li>
+						<li><a href="/oruro">ORURO</a></li>
+						<li><a href="/infTuristica">INF. TURISTICA</a></li>
+						<li><a href="/busesTransporte">BUSES & TRANSPORTE</a></li>
+						<li><a href="/carnaval">CARNAVAL</a></li>
+						<li><a href="/museos">MUSEOS</a></li>
+						<li><a href="/acercaDe">ACERCA DE</a></li>
+						<li><a href="/gesContenido">GES. DE CONTENIDO</a></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+	</header>
+</Layout>
+<style>
+	header{
+		box-shadow: 0 0 10px;
+	}
+</style>
