@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conjuntos",
+  "info": {
+    "singularName": "conjunto",
+    "pluralName": "conjuntos",
+    "displayName": "conjunto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "danza": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::danza.danza",
+      "inversedBy": "conjuntos"
+    },
+    "fotos_conjuntos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fotos-conjunto.fotos-conjunto",
+      "mappedBy": "conjunto"
+    }
+  }
+}

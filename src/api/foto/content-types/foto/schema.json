@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fotos",
+  "info": {
+    "singularName": "foto",
+    "pluralName": "fotos",
+    "displayName": "Foto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "turismo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::turismo.turismo"
+    },
+    "ciudad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ciudad.ciudad",
+      "inversedBy": "foto"
+    }
+  }
+}

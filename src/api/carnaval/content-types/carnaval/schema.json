@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carnavals",
+  "info": {
+    "singularName": "carnaval",
+    "pluralName": "carnavals",
+    "displayName": "carnaval",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "historia": {
+      "type": "text"
+    },
+    "cronograma": {
+      "type": "text"
+    },
+    "danzas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::danza.danza",
+      "mappedBy": "carnaval"
+    },
+    "listaConjuntos": {
+      "type": "text"
+    }
+  }
+}

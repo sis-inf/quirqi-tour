@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danzas",
+  "info": {
+    "singularName": "danza",
+    "pluralName": "danzas",
+    "displayName": "danza"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string"
+    },
+    "historia": {
+      "type": "text"
+    },
+    "fotos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "carnaval": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::carnaval.carnaval",
+      "inversedBy": "danzas"
+    },
+    "conjuntos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::conjunto.conjunto",
+      "mappedBy": "danza"
+    }
+  }
+}

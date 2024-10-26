@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fotos_conjuntos",
+  "info": {
+    "singularName": "fotos-conjunto",
+    "pluralName": "fotos-conjuntos",
+    "displayName": "fotosConjunto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "conjunto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::conjunto.conjunto",
+      "inversedBy": "fotos_conjuntos"
+    }
+  }
+}
