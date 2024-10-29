@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "usuario"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rol": {
+      "type": "enumeration",
+      "enum": [
+        "administrador"
+      ]
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "apellidos": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contacto": {
+      "type": "string"
+    }
+  }
+}

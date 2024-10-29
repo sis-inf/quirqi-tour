@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "singularName": "empresa",
+    "pluralName": "empresas",
+    "displayName": "empresa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "contacto": {
+      "type": "string"
+    },
+    "destino": {
+      "type": "string"
+    },
+    "idEMPRESA": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::punto-salida.punto-salida",
+      "inversedBy": "id_empresas"
+    },
+    "idEmpresa": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bus.bus",
+      "mappedBy": "empresa"
+    }
+  }
+}

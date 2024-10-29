@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fotos",
+  "info": {
+    "singularName": "foto",
+    "pluralName": "fotos",
+    "displayName": "Foto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foto": {
+      "type": "string"
+    },
+    "idCiudad": {
+      "type": "string"
+    },
+    "idTurismo": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ciudad.ciudad",
+      "mappedBy": "foto"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buses",
+  "info": {
+    "singularName": "bus",
+    "pluralName": "buses",
+    "displayName": "Buses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string"
+    },
+    "costoPasaje": {
+      "type": "decimal"
+    },
+    "horarioSalida": {
+      "type": "datetime"
+    },
+    "empresa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::empresa.empresa",
+      "inversedBy": "idEmpresa"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ciudads",
+  "info": {
+    "singularName": "ciudad",
+    "pluralName": "ciudads",
+    "displayName": "Ciudad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "idCiudad": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "historia": {
+      "type": "text"
+    },
+    "foto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::foto.foto",
+      "inversedBy": "ciudad"
+    }
+  }
+}
